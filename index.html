@@ -2,94 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Speedy the Bunny</title>
+    <title>Speedy the Bunny – Coming Soon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #ffffff;
-            color: #333;
-            height: 100vh;
+            font-family: 'Arial Black', Impact, sans-serif;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            background: radial-gradient(circle at top, #0a2cff, #020824);
+            color: #ffffff;
         }
 
-        /* HERO SECTION */
-        .hero {
+        .container {
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
             text-align: center;
-            padding: 40px 20px;
         }
 
-        .hero img {
-            max-width: 360px;
+        .brand-image {
+            max-width: 340px;
             width: 100%;
             height: auto;
+            filter: drop-shadow(0 0 25px rgba(0, 140, 255, 0.8));
+            animation: float 3s ease-in-out infinite;
         }
 
-        .hero-text {
-            margin-top: 30px;
-            max-width: 600px;
-            min-height: 100px;
-            font-size: 18px;
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
         }
 
-        /* FOOTER */
+        .headline {
+            margin-top: 35px;
+            font-size: clamp(36px, 6vw, 64px);
+            color: #4fd2ff;
+            text-shadow:
+                0 0 10px rgba(79, 210, 255, 0.9),
+                0 0 30px rgba(0, 140, 255, 0.7);
+            letter-spacing: 2px;
+        }
+
+        .subtext {
+            margin-top: 15px;
+            font-size: clamp(18px, 3vw, 26px);
+            color: #bfeaff;
+            max-width: 700px;
+        }
+
         footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 25px;
             font-size: 14px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            background: rgba(0,0,0,0.3);
         }
 
         .social-links a {
-            margin-left: 15px;
+            margin-left: 18px;
             text-decoration: none;
-            color: #333;
+            font-weight: bold;
+            color: #4fd2ff;
         }
 
         .social-links a:hover {
-            text-decoration: underline;
+            text-shadow: 0 0 8px rgba(79, 210, 255, 1);
         }
 
-        /* MOBILE ADJUSTMENTS */
         @media (max-width: 600px) {
             footer {
                 flex-direction: column;
                 gap: 10px;
-            }
-
-            .social-links a {
-                margin-left: 10px;
-                margin-right: 10px;
             }
         }
     </style>
 </head>
 <body>
 
-    <section class="hero">
+    <div class="container">
         <img 
-            src="SpeedyTheBunny.jpg" 
-            alt="Speedy the Bunny"
+            src="your-image-here.png" 
+            alt="Speedy the Bunny Superhero" 
+            class="brand-image"
         >
 
-        <div class="hero-text">
-            Speedy the Bunny is coming soon
+        <div class="headline">
+            SPEEDY THE BUNNY
         </div>
-    </section>
+
+        <div class="subtext">
+            A new superhero is hopping into action.<br>
+            <strong>COMING SOON.</strong>
+        </div>
+    </div>
 
     <footer>
         <div>
@@ -97,7 +111,7 @@
         </div>
 
         <div class="social-links">
-            <a https://www.instagram.com/speedythebunny.official/" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/yourusername" target="_blank">Instagram</a>
             <a href="https://www.facebook.com/yourpage" target="_blank">Facebook</a>
         </div>
     </footer>
