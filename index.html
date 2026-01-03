@@ -1,120 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Speedy the Bunny – Coming Soon</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speedy the Bunny</title>
+  <style>
+    :root {
+      --blue-dark: #1663A7;
+      --blue-main: #4BCD9;
+      --blue-light: #2EFAB;
+      --red-accent: #588E1E;
+      --white: #FFFFFF;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial Black', Impact, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: radial-gradient(circle at top, #0a2cff, #020824);
-            color: #ffffff;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-            text-align: center;
-        }
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", "Trebuchet MS", system-ui, sans-serif;
+      background-color: #fef8f8;
+      background-image: url('Background.jpg');
+      background-repeat: repeat;
+      background-size: auto;
+      color: var(--blue-dark);
+      line-height: 1.6;
+    }
 
-        .brand-image {
-            max-width: 340px;
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 0 25px rgba(0, 140, 255, 0.8));
-            animation: float 3s ease-in-out infinite;
-        }
+    header {
+      background: linear-gradient(135deg, var(--blue-main), var(--blue-dark));
+      color: var(--white);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
 
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
+    header h1 {
+      font-size: 3rem;
+      margin: 0 0 0.5rem;
+      color: var(--blue-dark);
+    }
 
-        .headline {
-            margin-top: 35px;
-            font-size: clamp(36px, 6vw, 64px);
-            color: #4fd2ff;
-            text-shadow:
-                0 0 10px rgba(79, 210, 255, 0.9),
-                0 0 30px rgba(0, 140, 255, 0.7);
-            letter-spacing: 2px;
-        }
+    header p {
+      font-size: 1.25rem;
+      margin: 0 auto 2rem;
+      max-width: 600px;
+      color: var(--blue-dark);
+    }
 
-        .subtext {
-            margin-top: 15px;
-            font-size: clamp(18px, 3vw, 26px);
-            color: #bfeaff;
-            max-width: 700px;
-        }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--white);
+      color: var(--blue-dark);
+      border-radius: 999px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-        footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 25px;
-            font-size: 14px;
-            border-top: 1px solid rgba(255,255,255,0.15);
-            background: rgba(0,0,0,0.3);
-        }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
 
-        .social-links a {
-            margin-left: 18px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #4fd2ff;
-        }
+    section {
+      position: relative;
 
-        .social-links a:hover {
-            text-shadow: 0 0 8px rgba(79, 210, 255, 1);
-        }
+      padding: 4rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-        @media (max-width: 600px) {
-            footer {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    </style>
+    section h2 {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    section p {
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+
+    .brand-sheet {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .brand-sheet img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .traits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .trait {
+      background: var(--blue-main);
+      color: var(--blue-main);
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .use-cases {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    footer {
+      background: var(--blue-dark);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    footer small {
+      opacity: 0.85;
+    }
+
+/* ================================
+   Speedy Running Animation
+================================ */
+
+.speedy-runner {
+  position: fixed;
+  bottom: 10px;
+  left: -200px; /* start off-screen */
+  width: 160px;
+  z-index: 9999;
+  pointer-events: none; /* click-through */
+  animation: run-across 18s linear infinite;
+}
+
+.speedy-runner img {
+  width: 100%;
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+/* Horizontal movement */
+@keyframes run-across {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(110vw);
+  }
+}
+
+/* Small running bounce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ================================
+   Framed Image Style
+================================ */
+
+.framed-image {
+  display: block;
+  margin: 0 auto 1.5rem;
+  padding: 14px;                 /* space between image and frame */
+  background: #ffffff;           /* inner mat */
+  border: 10px solid #1663A7;      /* frame color */
+  border-radius: 18px;           /* rounded corners */
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.25),
+    inset 0 0 0 4px #4BCD9;       /* inner accent line */
+  max-width: 90%;
+}
+
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <img 
-            src="SpeedyTheBunny.jpg" 
-            alt="Speedy the Bunny Superhero" 
-            class="brand-image"
-        >
+  <header class="splash">
+    <img src="SpeedyTheBunnyLogo.jpg" alt="Speedy the Bunny running logo" class="hero-logo" />
+<br /><br /><br /><br /><br />
+    <h1>Speedy the Bunny</h1>
+    <p>Fast feet. Endless adventures.
+<br />A new superhero is hopping into action.
+<br /><br />COMING SOON.</p>
+  </header>
 
-        <div class="headline">
-            SPEEDY THE BUNNY
-        </div>
+  <section id="about">
+    <img src="SpeedyTheBunnyLogoWebSite.jpg" alt="Speedy the Bunny badge logo" style="display:block;margin:0 auto 1.5rem;" />
+    <h2>About Speedy the Bunny</h2>
+    <p>
+      Speedy the Bunny is a playful bunny.
+    </p>
 
-        <div class="subtext">
-            A new superhero is hopping into action.<br>
-            <strong>COMING SOON.</strong>
-        </div>
+    <div class="traits">
+      <div class="trait">Brave</div>
+      <div class="trait">Curious</div>
+      <div class="trait">Always Moving</div>
     </div>
+  </section>
 
-    <footer>
-        <div>
-            © 2026 Speedy the Bunny. All rights reserved.
-        </div>
+  <section id="Origin">
+    <img src="SpeedyTheBunnyOriginal.jpg" alt="Speedy the Bunny Original Design" style="display:block;margin:0 auto 1.5rem;" class="framed-image" />
+    <h2>Original Design</h2>
+    <p>
+      This is one of the original designes of Speedy the Bunny that was drawn by Stephanos Demetriou
+    </p>
+  </section>
 
-        <div class="social-links">
-            <a href="https://www.instagram.com/speedythebunny.official" target="_blank">Instagram</a>
-        </div>
-    </footer>
+  
+<!-- Speedy Running Across Bottom -->
+<div class="speedy-runner">
+  <img src="SpeedyTheBunny.png" alt="Speedy the Bunny running">
+</div>
+
+  
+
+  <footer>
+    <p style="margin-bottom:1rem;">Follow Speedy’s adventures</p>
+    <a href="https://www.instagram.com/SpeedyTheBunny.Official" target="_blank" class="btn">Follow on Instagram</a>
+    <br /><br />
+    <small>© 2026 Speedy the Bunny. All rights reserved.</small>
+  </footer>
 
 </body>
 </html>
