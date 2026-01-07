@@ -200,16 +200,19 @@
 ================================ */
 
 .framed-image {
-  display: block;
-  margin: 0 auto 1.5rem;
-  padding: 14px;                 /* space between image and frame */
-  background: #ffffff;           /* inner mat */
-  border: 10px solid #1663A7;      /* frame color */
-  border-radius: 20px;           /* rounded corners */
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.25),
-    inset 0 0 0 4px #4BCD9;       /* inner accent line */
-  max-width: 90%;
+    display: block;
+    margin: 0 auto 1.5rem;
+    padding: 14px;
+    background: #ffffff;
+    border-radius: 20px;
+    max-width: 90%;
+
+    /* Outer blue frame */
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25), /* drop shadow */
+        inset 0 0 0 10px #1663A7,     /* outer blue */
+        inset 0 0 0 16px #ffffff,    /* white middle */
+        inset 0 0 0 22px #1663A7;    /* inner blue */
 }
 
 @media (max-width: 600px) {
