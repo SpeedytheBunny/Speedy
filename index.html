@@ -12,286 +12,15 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.speedythebunny.com/images/SpeedyTheBunnyLogo.png">
   <title>Speedy the Bunny</title>
-  <style>
-    :root {
-      --blue-dark: #1663A7;
-      --blue-main: #4BCD9;
-      --blue-light: #2EFAB;
-      --red-accent: #588E1E;
-      --white: #FFFFFF;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      overflow-x: hidden;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Comic Sans MS", "Trebuchet MS", system-ui, sans-serif;
-      background-color: #fef8f8;
-      background-image: url('Background.jpg');
-      background-repeat: repeat;
-      background-size: auto;
-      color: var(--blue-dark);
-      line-height: 1.5;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--blue-main), var(--blue-dark));
-      color: var(--white);
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin: 0 0 0.5rem;
-      color: var(--blue-dark);
-    }
-
-    header p {
-      font-size: 1.25rem;
-      margin: 0 auto 2rem;
-      max-width: 600px;
-      color: var(--blue-dark);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      color: var(--blue-dark);
-      border-radius: 999px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 10px rgba(0,0,0,0.15);
-    }
-
-    section {
-      position: relative;
-
-      padding: 4rem 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    section h2 {
-      font-size: 2.25rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    section p {
-      max-width: 1100px;
-      margin: 0 auto 2.5rem;
-      text-align: center;
-    }
-
-    .brand-sheet {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .brand-sheet img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-
-    .traits {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .trait {
-      background: var(--blue-main);
-      color: var(--blue-main);
-      padding: 0.75rem 1.25rem;
-      border-radius: 999px;
-      font-weight: bold;
-    }
-
-    .use-cases {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .card {
-      background: var(--white);
-      border-radius: 20px;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    footer {
-      background: var(--blue-dark);
-      color: var(--white);
-      text-align: center;
-      padding: 2rem 1.5rem;
-    }
-
-    footer small {
-      opacity: 0.85;
-    }
-
-/* ================================
-   Speedy Running Animation
-================================ */
-
-.speedy-runner {
-  position: fixed;
-  bottom: 10px;
-  left: -200px; /* start off-screen */
-  width: 160px;
-  z-index: 9999;
-  pointer-events: none; /* click-through */
-  animation: run-across 15s linear infinite;
-}
-
-.speedy-runner img {
-  width: 100%;
-  animation: bounce 0.7s ease-in-out infinite;
-}
-
-/* Horizontal movement */
-@keyframes run-across {
-  0% {
-    transform: translateX(-200px);
-  }
-  100% {
-    transform: translateX(100vw);
-  }
-}
-
-/* Small running bounce */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-7px);
-  }
-}
-
-/* ================================
-   Framed Image Style
-================================ */
-
-.framed-image {
-    display: block;
-    margin: 0 auto 1.5rem;
-    padding: 14px;
-    background: #ffffff;
-    border-radius: 20px;
-    max-width: 90%;
-
-    /* Outer blue frame */
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.25), /* drop shadow */
-        inset 0 0 0 10px #1663A7,     /* outer blue */
-        inset 0 0 0 10px #ffffff,    /* white middle */
-        inset 0 0 0 10px #1663A7;    /* inner blue */
-}
-
-@media (max-width: 600px) {
-  .hero-logo {
-    width: 90vw;       /* fills most of the screen */
-    max-width: 420px;  /* prevents it from getting too big */
-  }
-}
-
-/* ================================
-   Top Navigation
-================================ */
-
-.top-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(6px);
-  z-index: 10000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.top-nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.75rem 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.top-nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.top-nav-links a {
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--blue-dark);
-  transition: color 0.2s ease;
-}
-
-.top-nav-links a:hover {
-  color: var(--red-accent);
-}
-
-.top-nav-logo img {
-  height: 36px;
-  width: auto;
-}
-
-/* Push page content below fixed nav */
-body {
-  padding-top: 64px;
-}
-
-/* Mobile tweaks */
-@media (max-width: 600px) {
-  .top-nav-links {
-    gap: 1rem;
-    font-size: 0.9rem;
-  }
-
-  .top-nav-logo img {
-    height: 30px;
-  }
-}
-
-  </style>
+<link rel="stylesheet" href="SpeedyTheBunny.css">
 </head>
 <body>
 <nav class="top-nav">
   <div class="top-nav-inner">
 
     <div class="top-nav-logo">
-      <a >
-        <img src="SpeedyTheBunnyLogo.png" alt="Speedy the Bunny Logo">
+      <a href="index.html">
+        <img src="SpeedyTheBunny-Logo.png" alt="Speedy the Bunny Logo">
       </a>
     </div>
 
@@ -320,8 +49,8 @@ More adventures, stories, and surprises are coming soon.
   </header>
 
   <section id="about">
-    <img src="SpeedyTheBunnyLogoWebSite.png" alt="Speedy the Bunny badge logo" style="display:block;margin:0 auto 1.5rem;" />
     <h2>About Speedy the Bunny</h2>
+    <img src="SpeedyTheBunnyLogoWebSite.png" alt="Speedy the Bunny badge logo" style="display:block;margin:0 auto 1.5rem;" />
     <p>
 Speedy the Bunny is a cheerful and adventurous bunny with a special gift he can run really fast. But Speedy’s greatest strength isn’t just his speed, it’s his heart.
 
@@ -339,9 +68,30 @@ This is only the beginning of Speedy’s story.
     </div>
   </section>
 
+<section id="characters">
+    <h2>Meet all the Characters</h2>
+
+    <div class="traits">
+<div class="trait">
+  <a href="index.html">
+    <img src="SpeedyTheBunnyLogoLink.png"
+         alt="Speedy the Bunny" />
+  </a>
+</div>
+
+<div class="trait">
+  <a href="SunshineTheBunny.html">
+    <img src="SunshineTheBunnyLogoLink.png"
+         alt="Sunshine the Bunny" />
+  </a>
+</div>
+
+    </div>
+</section>
+
   <section id="Origin">
-    <img src="SpeedyTheBunnyOriginal.jpg" alt="Speedy the Bunny Original Design" style="display:block;margin:0 auto 1.5rem;" class="framed-image" />
     <h2>Original Design</h2>
+    <img src="SpeedyTheBunnyOriginal.jpg" alt="Speedy the Bunny Original Design" style="display:block;margin:0 auto 1.5rem;" class="framed-image" />
     <p>
       This is one of the original designs of Speedy the Bunny that was created by Stephanos Demetriou
     </p>
