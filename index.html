@@ -221,9 +221,87 @@
   }
 }
 
+/* ================================
+   Top Navigation
+================================ */
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 10000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.top-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.top-nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--blue-dark);
+  transition: color 0.2s ease;
+}
+
+.top-nav-links a:hover {
+  color: var(--red-accent);
+}
+
+.top-nav-logo img {
+  height: 36px;
+  width: auto;
+}
+
+/* Push page content below fixed nav */
+body {
+  padding-top: 64px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .top-nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .top-nav-logo img {
+    height: 30px;
+  }
+}
+
   </style>
 </head>
 <body>
+<nav class="top-nav">
+  <div class="top-nav-inner">
+
+    <div class="top-nav-logo">
+      <a >
+        <img src="SpeedyTheBunnyLogo.png" alt="Speedy the Bunny Logo">
+      </a>
+    </div>
+
+    <div class="top-nav-links">
+      <a href="#about">About</a>
+      <a href="#characters">Characters</a>
+    </div>
+
+  </div>
+</nav>
 
   <header class="splash">
     <img src="SpeedyTheBunnyLogo.png" alt="Speedy the Bunny running logo" class="hero-logo" />
