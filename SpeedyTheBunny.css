@@ -224,7 +224,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: #034d8e;
   backdrop-filter: blur(6px);
   z-index: 10000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -233,7 +233,7 @@
 .top-nav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.75rem 1.25rem;
+  padding: 0.50rem 1.00rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -247,16 +247,17 @@
 .top-nav-links a {
   text-decoration: none;
   font-weight: bold;
-  color: var(--blue-dark);
+  color: var(--white);
   transition: color 0.2s ease;
+  font-size: 20px;
 }
 
 .top-nav-links a:hover {
-  color: var(--blue-main);
+  color: var(--white);
 }
 
 .top-nav-logo img {
-  height: 36px;
+  height: 50px;
   width: auto;
 }
 
