@@ -1,55 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<style>
-body {
-  margin:0;
-  overflow:hidden;
-  background:#111;
-  height:100vh;
-}
-#character {
-  position:absolute;
-  bottom:0;
-  left:-150px;
-  width:120px;
-  height:180px;
-  
-  background-image: url("SunshineTheBunny.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-
-  animation: walkIn 2s forwards;
-}
-#stars {
-  position:absolute;
-  bottom:50px;
-  left:120px;
-  width:150px;
-  height:100px;
-
-  background-image: url("SunshineTheBunnyPower.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-
-  border-radius:0%;
-  opacity:0;
-}
-@keyframes walkIn {
-  to { left:20px; }
-}
-@keyframes throwStars {
-  from { opacity:1; transform:translateX(0); }
-  to { opacity:0; transform:translateX(300px); }
-}
-@keyframes walkOut {
-  to { left:-150px; }
-}
-</style>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Meet Sunshine the Bunny – a Sunshine super hero, fun, friendly bunny. Enjoy stories and adventures.">
@@ -110,12 +61,6 @@ Sunshine the Bunny is a cheerful and adventurous bunny with a powerful gift, she
       This is one of the original designs of Sunshine the Bunny that was created by Amalia-Maria Demetriou
     </p>
   </section>
-
-  
-<!-- Sunshine Running Across Bottom -->
-<div class="Sunshine-runner">
-  <img src="SunshineTheBunny.png" alt="Sunshine the Bunny running">
-</div>
 
 <div id="character"></div>
 <div id="stars"></div>
