@@ -235,17 +235,10 @@
 .framed-image {
     display: block;
     margin: 0 auto 1.5rem;
-    padding: 14px;
-    background: #ffffff;
-    border-radius: 20px;
-    max-width: 90%;
-
-    /* Outer blue frame */
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.25), /* drop shadow */
-        inset 0 0 0 10px #1663A7,     /* outer blue */
-        inset 0 0 0 10px #ffffff,    /* white middle */
-        inset 0 0 0 10px #1663A7;    /* inner blue */
+    border: 20px solid #1663A7;      /* First Blue Frame */
+    outline: 5px solid #ffffff;     /* White Gap */
+    box-shadow: 0 0 0 10px #1c4a8a; /* Second Blue Frame */
+    border-radius: 5px;            /* Note: Outlines don't always follow radius in older browsers */
 }
 
 @media (max-width: 600px) {
@@ -316,4 +309,5 @@ body {
   .top-nav-logo img {
     height: 30px;
   }
+
 }
