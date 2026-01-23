@@ -234,7 +234,7 @@
 
 .framed-image {
     display: block;
-    margin: 0 auto 1.5rem;
+    margin: 10px auto 1.5rem !important;
     border: 20px solid #1663A7;      /* First Blue Frame */
     outline: 5px solid #ffffff;     /* White Gap */
     box-shadow: 0 0 0 10px #1c4a8a; /* Second Blue Frame */
@@ -311,3 +311,4 @@ body {
   }
 
 }
+
