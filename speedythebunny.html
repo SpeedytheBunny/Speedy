@@ -10,9 +10,12 @@
   <meta property="og:description" content="Discover Speedy the Bunny, a lovable speedy super hero bunny with stories and adventures.">
   <meta property="og:url" content="https://www.speedythebunny.com/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.speedythebunny.com/images/SpeedyTheBunnyLogo.png">
+  <meta property="og:image" content="https://www.speedythebunny.com/SpeedyTheBunnyLogo.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preload" as="image" href="SpeedyTheBunnyLogo.png">
   <title>Speedy the Bunny</title>
-<link rel="stylesheet" href="SpeedyTheBunny.css">
+<link rel="stylesheet" href="SpeedyTheBunny.min.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Speedy the Bunny","description":"A cheerful and adventurous bunny with super speed abilities.","url":"https://www.speedythebunny.com/speedythebunny.html","image":"https://www.speedythebunny.com/SpeedyTheBunnyLogo.png","character":{"@type":"Thing","name":"Speedy","traits":["Brave","Curious","Always Moving"]}}</script>
 </head>
 <body>
 <nav class="top-nav">
@@ -33,7 +36,7 @@
 </nav>
 
   <header class="splash">
-    <img src="SpeedyTheBunnyLogo.png" alt="Speedy the Bunny running logo" class="hero-logo" />
+    <img src="SpeedyTheBunnyLogo.png" alt="Speedy the Bunny running logo" class="hero-logo" loading="eager" />
 <br /><br />
     <h1>Speedy the Bunny</h1>
 <p>
@@ -50,7 +53,7 @@ More adventures, stories, and surprises are coming soon.
 
   <section id="about">
     <h2>About Speedy the Bunny</h2>
-    <img src="SpeedyTheBunnyLogoWebSite.png" alt="Speedy the Bunny badge logo" style="display:block;margin:0 auto 1.5rem;" />
+    <img src="SpeedyTheBunnyLogoWebSite.png" alt="Speedy the Bunny badge logo" style="display:block;margin:0 auto 1.5rem;" loading="lazy" />
     <p>
 Speedy the Bunny is a cheerful and adventurous bunny with a special gift he can run really fast. But Speedy’s greatest strength isn’t just his speed, it’s his heart.
 
@@ -70,7 +73,7 @@ This is only the beginning of Speedy’s story.
 
   <section id="Origin">
     <h2>Original Design</h2>
-    <img src="SpeedyTheBunnyOriginal.jpg" alt="Speedy the Bunny Original Design" style="display:block;margin:0 auto 1.5rem;" class="framed-image" />
+    <img src="SpeedyTheBunnyOriginal.jpg" alt="Speedy the Bunny Original Design" style="display:block;margin:0 auto 1.5rem;" class="framed-image" loading="lazy" />
     <p>
       This is one of the original designs of Speedy the Bunny that was created by Stephanos Demetriou
     </p>
@@ -79,14 +82,14 @@ This is only the beginning of Speedy’s story.
   
 <!-- Speedy Running Across Bottom -->
 <div class="speedy-runner">
-  <img src="SpeedyTheBunny.png" alt="Speedy the Bunny running">
+  <img src="SpeedyTheBunny.png" alt="Speedy the Bunny running" loading="lazy">
 </div>
 
   
 
   <footer>
     <p style="margin-bottom:1rem;">Follow Speedy’s adventures</p>
-    <a href="https://www.instagram.com/SpeedyTheBunny.Official" target="_blank" class="btn"><img src="Instagram.png" alt="Speedy the Bunny Official Instagram" /></a>
+    <a href="https://www.instagram.com/SpeedyTheBunny.Official" target="_blank" rel="noopener noreferrer" class="btn"><img src="Instagram.png" alt="Speedy the Bunny Official Instagram" loading="lazy" /></a>
     <br /><br />
     <small>© 2026 Speedy the Bunny. All rights reserved.</small>
   </footer>

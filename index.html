@@ -10,9 +10,12 @@
   <meta property="og:description" content="Discover Speedy the Bunny, a lovable speedy super hero bunny with stories and adventures.">
   <meta property="og:url" content="https://www.speedythebunny.com/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.speedythebunny.com/images/SpeedyTheBunnyLogo.png">
+  <meta property="og:image" content="https://www.speedythebunny.com/SpeedyTheBunnyLogo.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preload" as="image" href="SpeedyAdventure.jpg" imagesrcset="SpeedyAdventure.jpg 1200w">
   <title>Speedy the Bunny</title>
-<link rel="stylesheet" href="SpeedyTheBunny.css">
+<link rel="stylesheet" href="SpeedyTheBunny.min.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Speedy the Bunny","url":"https://www.speedythebunny.com","logo":"https://www.speedythebunny.com/SpeedyTheBunnyLogo.png","sameAs":["https://www.instagram.com/SpeedyTheBunny.Official"],"description":"A fun, friendly superhero bunny with incredible speed and endless adventures."}</script>
 </head>
 <body>
 <nav class="top-nav">
@@ -32,7 +35,7 @@
 </nav>
 
   <header class="splash" style="padding: 0px !Important;">
-    <img src="SpeedyAdventure.jpg" alt="Speedy the Bunny Adventure" class="hero-logo" style="width: 100%;" />
+    <img src="SpeedyAdventure.jpg" alt="Speedy the Bunny Adventure" class="hero-logo" style="width: 100%;" loading="eager" />
   </header>
 
 <section id="characters">
@@ -41,29 +44,22 @@
     <div class="traits">
 <div class="trait">
   <a href="speedythebunny.html">
-    <img src="SpeedyTheBunnyLogoLink.png"
-         alt="Speedy the Bunny" />
+    <img src="SpeedyTheBunnyLogoLink.png" alt="Speedy the Bunny" loading="lazy" />
   </a>
 </div>
-
 <div class="trait">
   <a href="sunshinethebunny.html">
-    <img src="SunshineTheBunnyLogoLink.png"
-         alt="Sunshine the Bunny" />
+    <img src="SunshineTheBunnyLogoLink.png" alt="Sunshine the Bunny" loading="lazy" />
   </a>
 </div>
-
 <div class="trait">
   <a href="starlor.html">
-    <img src="StarLorLogoLink.png"
-         alt="StarLor" />
+    <img src="StarLorLogoLink.png" alt="StarLor" loading="lazy" />
   </a>
 </div>
-
 <div class="trait">
   <a href="robotron.html">
-    <img src="RoboTronLogoLink.png"
-         alt="RoboTron" />
+    <img src="RoboTronLogoLink.png" alt="RoboTron" loading="lazy" />
   </a>
 </div>
 
@@ -72,7 +68,7 @@
 
   <footer>
     <p style="margin-bottom:1rem;">Follow Speedy’s adventures</p>
-    <a href="https://www.instagram.com/SpeedyTheBunny.Official" target="_blank" class="btn"><img src="Instagram.png" alt="Speedy the Bunny Official Instagram" /></a>
+    <a href="https://www.instagram.com/SpeedyTheBunny.Official" target="_blank" rel="noopener noreferrer" class="btn"><img src="Instagram.png" alt="Speedy the Bunny Official Instagram" loading="lazy" /></a>
     <br /><br />
     <small>© 2026 Speedy the Bunny. All rights reserved.</small>
   </footer>
